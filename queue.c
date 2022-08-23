@@ -2,7 +2,8 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-QUEUE_t* createQueue(int8_t i8Size){
+QUEUE_t* createQueue(int8_t i8Size)
+{
     QUEUE_t* pInstance=(QUEUE_t *)malloc(sizeof(QUEUE_t));
     pInstance->i8Size=i8Size;
     pInstance->i8EmptySpace=i8Size;
@@ -10,7 +11,8 @@ QUEUE_t* createQueue(int8_t i8Size){
     pInstance->i8Front=-1;
     pInstance->i8Rear=-1;
     pInstance->pi16Array=(int16_t *)malloc(sizeof(int16_t)*i8Size);
-    for(int8_t i=0;i<i8Size;i++){
+    for(int8_t i=0;i<i8Size;i++)
+    {
         pInstance->pi16Array[i]=INT16_MIN;
     }
     return pInstance;
